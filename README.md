@@ -3,7 +3,7 @@ A Height-Aware, Performer-Focused Multi-Agent System for Audition Discovery
 
 Track: Concierge Agents
 
-1. Overview
+## 1. Overview
 
 Disney auditions often include strict height ranges, performer-presentation requirements, and union classifications — yet the official audition system does not allow performers to filter by any of these critical attributes. Searching for opportunities becomes a time-consuming, frustrating process: reading through pages of text, converting heights, interpreting inconsistent formats, and hoping not to miss a role.
 
@@ -17,7 +17,7 @@ This project builds a Concierge-style, multi-agent audition search assistant tha
 
 The system uses agent orchestration, custom tools, context-aware preprocessing, and Gemini models to make audition discovery fast, accurate, and performer-centric.
 
-2. Problem
+## 2. Problem
 
 The Disney audition feed is not built for performers searching by their own attributes. The limitations include:
 
@@ -37,7 +37,7 @@ Performers lose time, miss opportunities, and often struggle to identify roles t
 
 This project aims to solve all of those pain points.
 
-3. Solution
+## 3. Solution
 
 The Disney Audition Search Agent converts the raw audition feed into a structured representation that supports both semantic and attribute-based queries. The agent:
 
@@ -61,7 +61,7 @@ Open-ended semantic queries powered by Gemini
 Returns customized audition recommendations
 Clean, concise, performer-specific results.
 
-4. Architecture
+## 4. Architecture
 
 The system uses a sequential multi-agent pipeline designed for clarity, separation of concerns, and context efficiency.
 
@@ -112,4 +112,37 @@ clean_html / XML parser — strips noise and extracts fields
 convert_length — robust height conversion utility
 
 google_search — background augmentation for ambiguous terms
+
+
+## 5. How to Run
+
+Clone the repository
+
+git clone https://github.com/musicman33321/AuditionConcierge.git
+cd AuditionConcierge
+
+
+Install dependencies
+
+pip install -r requirements.txt
+
+
+Launch the notebook
+
+jupyter notebook disneyauditionsearch.ipynb
+
+
+Run the notebook cells from top to bottom
+
+The data preprocessing step runs automatically (fetching the latest Disney audition feed and cleaning it).
+
+Once the preprocessing completes, you can submit queries using the provided UI elements or by calling the agent directly.
+
+Example queries
+
+“I’m a 5'4" female-presenting dancer — what auditions are open for me?”
+
+“Show me Equity roles between 5'2" and 5'6".”
+
+“List any character performer auditions available this month.”
 
