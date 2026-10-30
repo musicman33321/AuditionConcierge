@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auditions>
+  <audition id="aud-1">
+    <name>Character Performer Auditions</name>
+    <businessunit>Disney World</businessunit>
+    <city>Orlando</city>
+    <state>FL</state>
+    <venue>Disney Casting</venue>
+    <talent_type>Character Performer</talent_type>
+    <start_date>2026-11-12</start_date>
+    <start_time>10:00 AM</start_time>
+    <time_zone>ET</time_zone>
+    <notes><![CDATA[
+      <p>Disney character performer auditions.</p>
+      <p>Role: Mickey Mouse</p>
+      <p>Height: 5'0" - 5'6". Female-presenting and male-presenting performers welcome. Non-Equity role. High-energy, warm character performer.</p>
+      <p>Role: Goofy</p>
+      <p>Height: 6'0" - 6'3". Male-presenting performer. Equity role. Tall, physical comedy character performer.</p>
+    ]]></notes>
+  </audition>
+  <audition id="aud-2">
+    <name>Dancer Auditions</name>
+    <businessunit>Disney World</businessunit>
+    <city>Orlando</city>
+    <state>FL</state>
+    <venue>Disney Casting</venue>
+    <talent_type>Dancer</talent_type>
+    <start_date>2026-11-20</start_date>
+    <start_time>9:00 AM</start_time>
+    <time_zone>ET</time_zone>
+    <notes><![CDATA[
+      <p>Parade dancer auditions. Height: 162 cm. Female-presenting dancer. Non-Equity role. Energetic parade dancer.</p>
+    ]]></notes>
+  </audition>
+  <audition id="aud-3">
+    <name>Old Audition</name>
+    <businessunit>Disney World</businessunit>
+    <city>Orlando</city>
+    <state>FL</state>
+    <venue>Disney Casting</venue>
+    <talent_type>Singer</talent_type>
+    <start_date>2026-10-01</start_date>
+    <start_time>9:00 AM</start_time>
+    <time_zone>ET</time_zone>
+    <notes><![CDATA[
+      <p>Singer auditions. Height: 64 in. Equity role.</p>
+    ]]></notes>
+  </audition>
+</auditions>
