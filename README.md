@@ -146,3 +146,34 @@ Example queries
 
 “List any character performer auditions available this month.”
 
+## 6. Production store (new, branch build/production-store)
+
+The production direction is tracked in issue #1 and designed in
+`docs/data-storage-draft.md`. The notebook above is unchanged.
+
+Layout:
+
+- `app/heights.py` - height parsing, inches canonical, cm is display only
+- `app/parse.py` - feed fetch, HTML cleaning, and posting-to-role splitting
+- `app/sync.py` - daily sync: hash upsert, embed only new/changed roles, expiry cleanup
+- `app/query.py` - structured filter first (deadline, height, Equity), then vector search
+- `app/store.py` - in-memory store for tests, plus a Postgres + pgvector store
+- `db/migrations/001_production_store.sql` - postings, roles, pgvector, archive table
+- `tests/` - unit and fixture tests, plus fixture feeds
+- `TESTING.md` - how to run tests, fixture syncs, and a real Postgres run
+
+Run the tests (no database or paid API needed):
+
+```
+python3 -m unittest discover -s tests -v
+```
+
+Run a fixture sync (no live feed):
+
+```
+python3 -m app.sync --fixture tests/fixtures/feed_v1.xml --today 2026-10-30
+```
+
+See `TESTING.md` for what is still needed before live use: a Postgres +
+pgvector connection string, an embedding model choice, and a daily-run
+decision (Vercel Cron or GitHub Actions).
